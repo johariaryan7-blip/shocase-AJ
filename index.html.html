@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aryan Acoustic Aura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Theme color for mobile -->
+  <meta name="theme-color" content="#ff4c4c">
+</head>
+<body>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop>
+    <source src="Perfect - Ed Sheeran (ringtone).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+  <!-- Header -->
+  <header>
+    <h1>Aryan Acoustic Aura 🎶</h1>
+    <p>Singer | Music Lover | Performer</p>
+  </header>
+
+  <!-- Image -->
+  <img src="IMG_20251124_205203_308.webp" width="300" alt="Aryan">
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Aryan. I love singing and performing soulful songs.
+      This web app is my personal showcase where I share my singing videos
+      and my musical journey.
+    </p>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="videos">
+    <h2>My Singing Videos</h2>
+    <div class="video-box">
+      <a href="https://youtu.be/Y8NUVHN6tC8" target="_blank">
+        <img src="https://img.youtube.com/vi/Y8NUVHN6tC8/hqdefault.jpg" style="width:100%; border-radius:10px;">
+      </a>
+      <p>husn cover</p>
+    </div>
+
+    <div class="video-box">
+      <a href="https://youtu.be/NoyV0QQRAw8" target="_blank">
+        <img src="https://img.youtube.com/vi/NoyV0QQRAw8/hqdefault.jpg" style="width:100%; border-radius:10px;">
+      </a>
+      <p>Phle bhi main❤️ || Random || Animal ||</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Connect With Me</h2>
+    <a href="http://www.youtube.com/@AryanAcousticAura" target="_blank">📺 YouTube</a>
+    <a href="https://www.instagram.com/aryan_strums/" target="_blank">📸 Instagram</a>
+    <a href="mailto:aryanjohari8@gmail.com">📧 aryanjohari8@gmail.com</a>
+    <a href="tel:+917067499843">📞 +91 7067499843</a>
+  </section>
+
+  <!-- Music Toggle Script -->
+  <script>
+    const bgMusic = document.getElementById('bgMusic');
+    const btn = document.querySelector('.music-btn');
+
+    function toggleMusic() {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        btn.textContent = "⏸️ Pause Music";
+      } else {
+        bgMusic.pause();
+        btn.textContent = "🎵 Play Music";
+      }
+    }
+
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+
+</body>
+</html>
