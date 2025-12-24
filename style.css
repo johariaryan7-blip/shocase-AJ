@@ -135,6 +135,31 @@ footer {
   width: 100%;
   border-radius: 10px;
 }
+/* Shorts Section */
+.shorts{
+  margin: 40px 0;
+  text-align: center;
+}
+
+.shorts-container{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.short-box{
+  width: 180px;
+}
+
+.short-box img{
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
 
 
 
